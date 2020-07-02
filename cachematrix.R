@@ -1,5 +1,9 @@
 ## Put comments here that give an overall description of what your
 # The following functions create a matrix and cache its inverse
+# 1) set : sets or stores the matrix
+# 2) get : return the matrix
+# 3) setinverse : caches the inverse of matrix
+# 4) getinverse : returns the inverse(if inverse is cached) 
 ## functions do
 
 ## Write a short comment describing this function
@@ -19,7 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+# This function returns the inverse of the special matrix
+# If the inverse is cached it will fetch it using getinverse
+# Else it will calculate the inverse and cache it using setinverse
 cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
   if(!is.null(inv)){
